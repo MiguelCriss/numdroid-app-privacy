@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Guía de uso de Numdroid: crea y presenta material matemático con texto, ecuaciones, gráficas, formas, circuitos, imágenes y dibujo a mano." />
+  <title>Guía de uso — Numdroid</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f9fc;
+      --text: #1a222c;
+      --muted: #4a5562;
+      --card: #ffffff;
+      --accent: #2f5d8a;
+      --border: #e4eaf1;
+      --tip-bg: #eaf2fa;
+      --premium-bg: #fdf3e1;
+      --premium-accent: #a86b00;
+      --code-bg: #eef2f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151a;
+        --text: #e6eaf0;
+        --muted: #b0b8c2;
+        --card: #1a1f26;
+        --accent: #9ec4e8;
+        --border: #2a313a;
+        --tip-bg: #1c2733;
+        --premium-bg: #2b2416;
+        --premium-accent: #f0c36a;
+        --code-bg: #232a33;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    h1 { margin-top: 0; font-size: 1.75rem; color: var(--accent); }
+    h2 { margin-top: 0; font-size: 1.35rem; color: var(--accent); }
+    h3 { margin-top: 1.5rem; font-size: 1.05rem; }
+    section { scroll-margin-top: 1rem; }
+    p, li { color: var(--text); }
+    li { margin-bottom: 0.3rem; }
+    .meta { color: var(--muted); font-size: 0.95rem; }
+    a { color: var(--accent); }
+    ul, ol { padding-left: 1.3rem; }
+    code {
+      background: var(--code-bg);
+      border-radius: 4px;
+      padding: 0.1rem 0.35rem;
+      font-size: 0.92em;
+    }
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+      gap: 0.4rem 1rem;
+      padding-left: 1.3rem;
+      margin: 0.5rem 0 0;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      background: var(--tip-bg);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+    }
+    .note.premium {
+      border-left-color: var(--premium-accent);
+      background: var(--premium-bg);
+    }
+    .note strong:first-child { display: block; margin-bottom: 0.2rem; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--tip-bg); }
+    .back { margin: 1.25rem 0 0; font-size: 0.9rem; }
+    footer { text-align: center; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+
+    <article class="card">
+      <h1>Guía de uso — Numdroid</h1>
+      <p class="meta">Versión de la app: 2.32 · Última actualización: 28 de septiembre de 2026</p>
+      <p>
+        Numdroid es una app para crear y presentar material matemático en hojas: texto,
+        ecuaciones, gráficas, formas geométricas, circuitos, diagramas de flujo, imágenes
+        y dibujo a mano. Puedes organizar tu documento en varias páginas y presentarlo
+        paso a paso, revelando cada elemento cuando quieras.
+      </p>
+      <p>
+        Todo funciona <strong>sin conexión a Internet</strong> y tus documentos se guardan
+        en tu teléfono.
+      </p>
+
+      <nav id="indice" aria-label="Índice">
+        <h3>Índice</h3>
+        <ol class="toc">
+          <li><a href="#primeros-pasos">Primeros pasos</a></li>
+          <li><a href="#pantalla">La pantalla</a></li>
+          <li><a href="#proyectos">Proyectos y galería</a></li>
+          <li><a href="#paginas">Páginas</a></li>
+          <li><a href="#seleccionar">Seleccionar y organizar</a></li>
+          <li><a href="#ajuste">Rejilla y alineación</a></li>
+          <li><a href="#texto">Texto</a></li>
+          <li><a href="#ecuaciones">Ecuaciones</a></li>
+          <li><a href="#graficas">Gráficas</a></li>
+          <li><a href="#formas">Formas, circuitos y flujogramas</a></li>
+          <li><a href="#imagenes">Imágenes</a></li>
+          <li><a href="#dibujo">Lápiz, resaltador y láser</a></li>
+          <li><a href="#deshacer">Deshacer y rehacer</a></li>
+          <li><a href="#presentacion">Presentación</a></li>
+          <li><a href="#exportar">Exportar y compartir</a></li>
+          <li><a href="#premium">Numdroid Premium</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ol>
+      </nav>
+    </article>
+
+    <!-- ============================================================ -->
+    <section id="primeros-pasos" class="card">
+      <h2>Primeros pasos</h2>
+      <ol>
+        <li>Abre la app. Verás la galería de proyectos.</li>
+        <li>Toca el botón <strong>+</strong> para crear un proyecto nuevo.</li>
+        <li>En la barra inferior, toca <strong>T</strong> para añadir un texto o <strong>∑</strong> para añadir una ecuación.</li>
+        <li>Toca dos veces el elemento para editarlo.</li>
+        <li>Arrastra el elemento para colocarlo donde quieras.</li>
+        <li>Cuando quieras presentarlo, toca el icono de <strong>diapositiva</strong> en la barra superior.</li>
+      </ol>
+      <div class="note">
+        <strong>Consejo</strong>
+        No hace falta guardar: Numdroid guarda tu trabajo automáticamente a los pocos
+        segundos de cada cambio.
+      </div>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="pantalla" class="card">
+      <h2>La pantalla</h2>
+      <p>Cuando abres un proyecto, la hoja ocupa toda la pantalla. A su alrededor encontrarás:</p>
+      <ul>
+        <li><strong>Flecha atrás</strong> (arriba a la izquierda): vuelve a la galería.</li>
+        <li><strong>Barra superior</strong>: el contador de páginas (por ejemplo <code>1/3</code>), el botón <strong>Ajuste</strong> (icono de cuadrícula), deshacer, rehacer, <strong>Presentación</strong> (icono de diapositiva) y <strong>Archivo</strong> (icono de carpeta).</li>
+        <li><strong>Barra inferior</strong>: botones para insertar (texto, ecuación, gráfica, formas e imagen) y las herramientas (selección, láser, lápiz, resaltador y borrador).</li>
+        <li><strong>Panel inferior de edición</strong>: aparece al seleccionar un elemento, con sus opciones.</li>
+      </ul>
+      <h3>Cómo funcionan las herramientas</h3>
+      <p>
+        Todas siguen el mismo patrón: el <strong>primer toque</strong> activa la herramienta
+        y el <strong>segundo toque</strong> abre o cierra su panel de opciones.
+      </p>
+      <h3>La mesa de trabajo</h3>
+      <p>
+        Alrededor de la hoja hay un espacio extra (media hoja por cada lado) donde puedes
+        dejar objetos temporalmente. Lo que queda fuera de la hoja se ve atenuado,
+        <strong>no se exporta</strong> y no aparece en la presentación.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="proyectos" class="card">
+      <h2>Proyectos y galería</h2>
+
+      <h3>La galería</h3>
+      <p>
+        Al abrir la app verás tus proyectos con su miniatura, nombre, fecha, número de
+        páginas y formato de hoja. Puedes verlos en rejilla, en lista o en vista compacta.
+      </p>
+      <ul>
+        <li><strong>Buscar</strong>: escribe parte del nombre.</li>
+        <li><strong>Ordenar</strong>: por <strong>Fecha</strong> o por <strong>Nombre</strong>. Toca el control con la flecha para invertir el orden.</li>
+        <li><strong>Abrir</strong>: toca la tarjeta del proyecto.</li>
+        <li><strong>Crear</strong>: toca <strong>+</strong>.</li>
+      </ul>
+
+      <h3>Renombrar, duplicar, exportar o eliminar</h3>
+      <p>
+        Toca el menú <strong>⋮</strong> de la tarjeta de un proyecto. Allí puedes renombrarlo,
+        duplicarlo, exportarlo (PDF, proyecto <code>.numdroid</code> o imágenes ZIP) o
+        eliminarlo.
+      </p>
+
+      <h3>Importar un proyecto</h3>
+      <ol>
+        <li>En la barra superior de la galería, toca el icono <strong>Importar</strong>.</li>
+        <li>Elige un archivo <code>.numdroid</code> de tu dispositivo.</li>
+        <li>El proyecto se añade a la galería. Si ya existe uno con el mismo nombre, se añade «(copia)».</li>
+      </ol>
+
+      <h3>Guardado automático</h3>
+      <p>
+        Tus proyectos se guardan solos unos segundos después de cada cambio, y también al
+        salir de la app o cambiar de proyecto. En el menú <strong>Archivo</strong> verás el
+        estado: <em>Cambios pendientes…</em>, <em>Guardando…</em>,
+        <em>Guardado automáticamente</em> o <em>Guardado</em>.
+      </p>
+      <p>
+        El botón <strong>Guardar</strong> del menú Archivo sirve para confirmar el nombre y
+        guardar en ese mismo momento.
+      </p>
+
+      <h3>Volver a donde estabas</h3>
+      <p>
+        Si sales de la app con un proyecto abierto, al volver se abrirá ese mismo proyecto,
+        en la misma página y con el mismo encuadre.
+      </p>
+
+      <h3>Tema claro u oscuro</h3>
+      <p>
+        En la galería, toca el menú <strong>⋮</strong> de la barra superior y elige
+        <strong>Claro</strong>, <strong>Oscuro</strong> o <strong>Sistema</strong>.
+        El tema no cambia el color de tus páginas.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="paginas" class="card">
+      <h2>Páginas</h2>
+      <p>
+        Se muestra una página a la vez. Para gestionarlas, toca el contador de páginas
+        (por ejemplo <code>2/5</code>) en la barra superior. Se abre el menú de páginas.
+      </p>
+
+      <h3>Qué puedes hacer desde el menú de páginas</h3>
+      <ul>
+        <li><strong>Ir a página</strong>: toca una miniatura del carrusel.</li>
+        <li><strong>Añadir página</strong>: crea una página en blanco después de la actual.</li>
+        <li><strong>Duplicar página</strong>: copia el contenido y también su orden de presentación.</li>
+        <li><strong>Mover atrás / adelante</strong>: cambia la posición de la página en el documento.</li>
+        <li><strong>Eliminar página</strong>: disponible si hay más de una.</li>
+        <li><strong>Vaciar página</strong>: borra todo el contenido de la página (pide confirmación y se puede deshacer).</li>
+      </ul>
+
+      <h3>Formato de hoja</h3>
+      <p>
+        Puedes elegir tamaño de papel (A5 a A2, Letter), formatos de pantalla
+        (<strong>Compacto</strong>, <strong>Estándar</strong> o <strong>Amplio</strong>) y la
+        orientación vertical u horizontal.
+      </p>
+      <div class="note premium">
+        <strong>Premium</strong>
+        En el plan gratis se usa A4 vertical. El resto de tamaños y orientaciones requieren
+        Numdroid Premium.
+      </div>
+
+      <h3>Color de la página</h3>
+      <p>En el menú de páginas puedes elegir el fondo:</p>
+      <ul>
+        <li><strong>Claros</strong>: blanco, papel, crema, grises, azules suaves, menta, lavanda, rosa y más.</li>
+        <li><strong>Oscuros</strong>: negro, carbón, pizarra, azules profundos, verdes oscuros, borgoña y más.</li>
+        <li><strong>Mis colores</strong>: crea tus propios colores con el icono de paleta (hasta 15, disponibles en todos tus proyectos).</li>
+      </ul>
+      <p>
+        Al pasar de un fondo claro a uno oscuro (o al revés), los colores del texto, las
+        ecuaciones, las formas y los trazos se ajustan solos para seguir siendo legibles.
+        Para eliminar un color propio, mantenlo pulsado.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="seleccionar" class="card">
+      <h2>Seleccionar y organizar</h2>
+
+      <h3>Moverse por la hoja</h3>
+      <ul>
+        <li><strong>Un dedo</strong>: desplaza la vista.</li>
+        <li><strong>Dos dedos</strong>: acerca, aleja y desplaza, como en un mapa.</li>
+      </ul>
+
+      <h3>Seleccionar un elemento</h3>
+      <ul>
+        <li><strong>Toca</strong> un elemento para seleccionarlo.</li>
+        <li>Tócalo otra vez, sin prisa, para quitar la selección.</li>
+        <li><strong>Toca dos veces</strong> rápido para abrir su editor.</li>
+      </ul>
+
+      <h3>Modos de selección</h3>
+      <p>Con la herramienta de selección activa, toca de nuevo su botón para elegir el modo:</p>
+      <ul>
+        <li><strong>Uno</strong>: selecciona un elemento cada vez.</li>
+        <li><strong>Multitoque</strong>: cada toque añade o quita elementos de la selección.</li>
+        <li><strong>Por trazo</strong>: dibuja un trazo con el dedo y se seleccionan todos los elementos que toque. En este modo, usa dos dedos para mover la vista.</li>
+      </ul>
+
+      <h3>Mover, cambiar tamaño y girar</h3>
+      <ul>
+        <li><strong>Mover</strong>: arrastra el elemento seleccionado.</li>
+        <li><strong>Cambiar tamaño</strong>: arrastra el mango de la esquina inferior derecha (formas, gráficas e imágenes). En textos y ecuaciones se cambia el tamaño de letra desde el panel.</li>
+        <li><strong>Girar</strong>: activa el botón de rotación del panel y arrastra el asa que aparece sobre el elemento.</li>
+      </ul>
+
+      <h3>Agrupar</h3>
+      <ol>
+        <li>Selecciona varios elementos con <strong>Multitoque</strong> o <strong>Por trazo</strong>.</li>
+        <li>En el panel inferior, toca <strong>Agrupar</strong>.</li>
+        <li>El grupo se mueve junto y, al tocar uno de sus elementos, se selecciona todo el grupo.</li>
+      </ol>
+      <p>Con varios elementos seleccionados también puedes cambiar capas, moverlos a otra página o eliminarlos. La <strong>✕</strong> quita la selección.</p>
+
+      <h3>Copiar, cortar y pegar</h3>
+      <ol>
+        <li>Selecciona el elemento y toca <strong>Copiar objeto</strong> o <strong>Cortar objeto</strong> en su panel.</li>
+        <li>Toca el botón <strong>Pegar</strong> de la barra, o mantén pulsado un espacio vacío y elige <strong>Pegar aquí</strong>.</li>
+      </ol>
+
+      <h3>Duplicar arrastrando</h3>
+      <p>
+        Con un elemento seleccionado, <strong>mantén pulsado</strong> y, sin soltar,
+        arrastra: se crea una copia que colocas donde quieras.
+      </p>
+
+      <h3>Otras opciones del panel</h3>
+      <ul>
+        <li><strong>Capas</strong>: lleva un elemento al frente o atrás.</li>
+        <li><strong>Mover a otra página</strong>: si el documento tiene varias páginas.</li>
+        <li><strong>Eliminar</strong>.</li>
+      </ul>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="ajuste" class="card">
+      <h2>Rejilla y alineación</h2>
+      <p>
+        Toca el botón <strong>Ajuste</strong> (icono de cuadrícula) en la barra superior.
+        Estas opciones se guardan en la app y valen para todos tus proyectos.
+      </p>
+      <ul>
+        <li><strong>Rejilla</strong>: muestra una cuadrícula de referencia sobre la hoja. No se exporta ni aparece en la presentación.</li>
+        <li><strong>Atraer a la rejilla</strong>: al soltar un elemento cerca de una línea de la rejilla, se alinea con ella.</li>
+        <li><strong>Atraer entre objetos</strong>: al arrastrar, si el centro de un elemento se acerca al centro de otro (o al centro de la hoja), aparece una guía punteada. Al soltar, los centros quedan alineados.</li>
+        <li><strong>Atraer a bordes de hoja</strong>: al acercar un elemento al borde de la hoja, el borde se resalta y, al soltar, el elemento queda justo al ras.</li>
+        <li><strong>Atraer rotación</strong>: al girar un elemento, se ajusta a ángulos de 45° (0°, 45°, 90°…) si estás cerca.</li>
+        <li><strong>Separación</strong> (Fina, Media o Gruesa): cambia la distancia entre las líneas de la rejilla.</li>
+      </ul>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="texto" class="card">
+      <h2>Texto</h2>
+
+      <h3>Añadir un texto</h3>
+      <ol>
+        <li>Toca <strong>T</strong> en la barra inferior.</li>
+        <li>Aparece «Nuevo texto» seleccionado.</li>
+        <li>Toca dos veces para escribir.</li>
+      </ol>
+
+      <h3>Formato del bloque</h3>
+      <p>Con el texto seleccionado, el panel inferior muestra el formato:</p>
+      <ul>
+        <li><strong>Tamaño</strong>: toca el número (por ejemplo <code>28</code>) y usa <strong>A−</strong>, el deslizador o <strong>A+</strong>.</li>
+        <li><strong>Fuente</strong>: Serif (estilo de libro de matemáticas, la predeterminada), Sans o Mono.</li>
+        <li><strong>Alineación</strong>: izquierda, centrado, derecha o justificado.</li>
+        <li><strong>Color</strong>: toca el círculo de color.</li>
+        <li><strong>Marco</strong>: añade un recuadro con contorno, grosor, relleno y opacidad.</li>
+        <li><strong>Ancho</strong>: activa las asas de ancho para ajustar el bloque.</li>
+      </ul>
+
+      <h3>Escribir y dar estilo a palabras</h3>
+      <p>
+        Toca dos veces el texto (o el icono de ajustes junto al campo) para pasar al modo
+        de edición. Desde su barra puedes mover el cursor, seleccionar, copiar, cortar y
+        pegar, y aplicar <strong>negrita</strong>, <em>cursiva</em> o color a la parte
+        seleccionada.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="ecuaciones" class="card">
+      <h2>Ecuaciones</h2>
+      <p>
+        Las ecuaciones se escriben en LaTeX, el lenguaje estándar de las fórmulas
+        matemáticas, y se ven en la hoja al instante. No hace falta saber LaTeX de memoria:
+        el teclado de Numdroid incluye plantillas para casi todo.
+      </p>
+
+      <h3>Añadir una ecuación</h3>
+      <ol>
+        <li>Toca <strong>∑</strong> en la barra inferior.</li>
+        <li>Aparece «Nueva ecuación» seleccionada.</li>
+        <li>Toca dos veces para abrir el editor.</li>
+        <li>Escribe con el teclado de ecuaciones. La fórmula se actualiza en la hoja mientras escribes.</li>
+      </ol>
+
+      <h3>El teclado de ecuaciones</h3>
+      <p>Al editar una ecuación aparece un teclado propio (no el del sistema) con:</p>
+      <ul>
+        <li><strong>Categorías</strong>: toca <strong>∑</strong> para mostrar u ocultar las plantillas por tema.</li>
+        <li><strong>Símbolos frecuentes</strong>: <code>+ − · = _ ^ &lt; &gt;</code>, fracción <code>a/b</code> y más.</li>
+        <li><strong>Números</strong> y un <strong>teclado de letras</strong>.</li>
+        <li><strong>Controles</strong> para mover el cursor, saltar entre huecos, seleccionar, copiar, cortar y pegar.</li>
+      </ul>
+      <div class="note">
+        <strong>Consejo</strong>
+        Las teclas con un <strong>punto</strong> en la esquina tienen variantes: mantenlas
+        pulsadas para verlas. Por ejemplo, <code>a/b</code> ofrece otras fracciones y
+        <code>·</code> ofrece <code>×</code>.
+      </div>
+
+      <h3>Categorías de plantillas</h3>
+      <ul>
+        <li><strong>Básico</strong>: potencias, raíces, subíndices.</li>
+        <li><strong>Cálculo</strong>: integrales (simples, dobles, triples, de línea), sumatorias, productorias, límites y derivadas.</li>
+        <li><strong>Agrupación</strong>: paréntesis, corchetes, llaves, valor absoluto, normas.</li>
+        <li><strong>Funciones</strong>: trigonométricas, hiperbólicas, logaritmos, máximo y mínimo.</li>
+        <li><strong>Conjuntos y lógica</strong>: ∈, ∪, ∩, ∀, ∃, ℝ, ℕ, ℤ…</li>
+        <li><strong>Flechas</strong>, <strong>Símbolos</strong> y <strong>Griego</strong>.</li>
+        <li><strong>Matrices</strong>: matrices, determinantes, sistemas por casos y matrices aumentadas.</li>
+        <li><strong>Estilos</strong>: texto dentro de la fórmula, recuadros, color y tipos de letra matemáticos.</li>
+        <li><strong>Acentos</strong>: vectores, barras, puntos…</li>
+      </ul>
+      <p>
+        Si seleccionas parte de la fórmula antes de tocar una plantilla, muchas plantillas
+        la envuelven. Por ejemplo, seleccionar <code>x+1</code> y tocar la raíz
+        crea la raíz de <code>x+1</code>.
+      </p>
+
+      <h3>Matrices</h3>
+      <ol>
+        <li>Abre la categoría <strong>Matrices</strong>.</li>
+        <li>Elige el tipo (paréntesis, corchetes, determinante…) y el número de filas y columnas.</li>
+        <li>Con el cursor dentro de la matriz aparecen controles para moverte entre celdas (<strong>^</strong>, <strong>v</strong>, <strong>Tab</strong>) y para añadir o quitar filas y columnas.</li>
+      </ol>
+
+      <h3>Texto dentro de una fórmula</h3>
+      <p>
+        En <strong>Estilos → texto</strong> puedes añadir frases dentro de la ecuación,
+        como «si x &gt; 0».
+      </p>
+
+      <h3>Editor ampliado</h3>
+      <p>
+        Toca el icono de <strong>pantalla completa</strong> para editar con más espacio y
+        una vista previa grande de la fórmula. Toca el mismo icono (o atrás) para volver.
+      </p>
+
+      <h3>Formato de la ecuación</h3>
+      <p>
+        Tamaño, color, marco, capas, rotación, mover a otra página y eliminar funcionan igual
+        que en los textos.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="graficas" class="card">
+      <h2>Gráficas</h2>
+
+      <h3>Añadir una gráfica</h3>
+      <ol>
+        <li>Toca el botón de <strong>gráfica</strong> en la barra inferior.</li>
+        <li>Elige <strong>Plano</strong> (cartesiano) o <strong>Recta</strong> (recta numérica).</li>
+        <li>Toca dos veces para editarla. Arrastra el mango de la esquina para cambiar su tamaño.</li>
+      </ol>
+
+      <h3>Plano cartesiano</h3>
+      <p>
+        Escribe cada función en su fila. Toca el prefijo de la fila (por ejemplo
+        <code>f: y=</code>) para cambiar el tipo de curva:
+      </p>
+      <ul>
+        <li><strong>en x</strong>: <code>y = f(x)</code>, por ejemplo <code>sin(x)</code>.</li>
+        <li><strong>en y</strong>: <code>x = f(y)</code>.</li>
+        <li><strong>polar</strong>: <code>r = f(θ)</code>, por ejemplo <code>r=1</code> para una circunferencia.</li>
+        <li><strong>paramétrica</strong>: dos campos, <code>x(t)</code> e <code>y(t)</code>.</li>
+        <li><strong>relación</strong>: ecuaciones o desigualdades, como <code>x^2+y^2=4</code> o <code>y≥2x</code>. Las desigualdades se sombrean.</li>
+        <li><strong>tabla de valores</strong>: escribe pares x | y para dibujar puntos, que puedes unir o cerrar como figura desde el menú <strong>⋮</strong>.</li>
+      </ul>
+      <ul>
+        <li>Añade más curvas con <strong>+</strong> (hasta 10).</li>
+        <li>Toca el círculo de color de una fila para cambiar el color de esa curva.</li>
+        <li>El menú <strong>⋮</strong> de cada fila permite cambiar el grosor, ocultar la curva, limitar su dominio o eliminarla.</li>
+        <li>Las funciones usan radianes. Para grados, usa <code>sind</code>, <code>cosd</code>, <code>tand</code>…</li>
+      </ul>
+
+      <h3>Ajustar los ejes</h3>
+      <p>
+        Toca <strong>vista</strong> en el teclado para elegir el rango de X e Y, mostrar u
+        ocultar la rejilla y los números de los ejes, y cambiar el tamaño de los ejes con
+        <strong>−</strong> y <strong>+</strong>. Toca <strong>123</strong> para volver al teclado.
+      </p>
+      <div class="note">
+        <strong>Consejo</strong>
+        Los campos numéricos aceptan expresiones como <code>π/2</code>, <code>1/3</code> o
+        <code>-2*e</code>.
+      </div>
+
+      <h3>Recta numérica</h3>
+      <p>Escribe conjuntos en cada fila. Ejemplos:</p>
+      <ul>
+        <li>Puntos: <code>2</code>, <code>{1,2,3}</code></li>
+        <li>Intervalos: <code>[2,5)</code>, <code>(−1,4]</code>, <code>[2,+∞)</code></li>
+        <li>Desigualdades: <code>x≥2</code>, <code>−1≤x&lt;3</code></li>
+        <li>Uniones: <code>[0,1] ∪ {2}</code></li>
+      </ul>
+      <p>
+        Un círculo relleno ● indica que el extremo está incluido y uno vacío ○ que está
+        excluido. Activa <strong>Apilar</strong> para dibujar cada conjunto en su propia línea.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="formas" class="card">
+      <h2>Formas, circuitos y flujogramas</h2>
+      <p>Toca <strong>Formas</strong> en la barra inferior y elige una pestaña:</p>
+      <ul>
+        <li><strong>Básico</strong>: rectángulo, elipse, triángulo, rombo, estrella, hexágono, líneas, flechas, ejes, ángulo, paralelogramo, trapecio, arco y más.</li>
+        <li><strong>Circuito</strong>: resistencia, inductor, condensador, fuentes, transformador, amplificador operacional, diodo, transistores, tierra y más.</li>
+        <li><strong>Lógica</strong>: compuertas AND, OR, NOT, NAND, NOR, XOR, XNOR y BUF.</li>
+        <li><strong>Flujograma</strong>: proceso, decisión, inicio/fin, datos, documento y otros nodos.</li>
+      </ul>
+
+      <h3>Estilo</h3>
+      <p>
+        En el panel inferior puedes cambiar el color, el grosor y el tipo de línea del
+        contorno (continua, guiones, puntos). En las formas cerradas también puedes elegir el
+        color y la transparencia del relleno.
+      </p>
+
+      <h3>Triángulos</h3>
+      <p>
+        Al seleccionar un triángulo aparece un asa en el vértice superior. Arrástrala a los
+        lados para convertirlo en isósceles, escaleno o casi rectángulo.
+      </p>
+
+      <h3>Conectar componentes de circuito</h3>
+      <ul>
+        <li>Con un componente seleccionado aparecen sus <strong>pines</strong>.</li>
+        <li><strong>Arrastra desde un pin</strong> hasta el pin de otro componente para crear un cable.</li>
+        <li>También puedes <strong>acercar</strong> un componente a otro: si los pines quedan cerca, se conectan solos.</li>
+        <li>Al mover un componente, sus cables se reajustan.</li>
+        <li>Selecciona un cable para cambiar su color o grosor, cambiar la dirección del codo (<strong>Invertir L</strong>), volver a la ruta automática (<strong>Restablecer</strong>) o arrastrar sus codos y tramos.</li>
+        <li>Los componentes se pueden <strong>reflejar</strong> horizontal o verticalmente.</li>
+      </ul>
+
+      <h3>Conectar nodos de flujograma</h3>
+      <p>
+        Se conectan igual que los circuitos. Las conexiones llevan flecha, que puedes quitar
+        desde el panel. Cada nodo admite una etiqueta corta de texto.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="imagenes" class="card">
+      <h2>Imágenes</h2>
+      <ol>
+        <li>Toca el botón de <strong>imagen</strong> en la barra inferior.</li>
+        <li>Elige una foto con el selector de Android.</li>
+        <li>La imagen aparece en el centro de la vista, lista para colocar.</li>
+      </ol>
+      <ul>
+        <li><strong>Mover</strong>: arrástrala.</li>
+        <li><strong>Cambiar tamaño</strong>: arrastra el mango de la esquina. La imagen mantiene sus proporciones.</li>
+        <li><strong>Girar, capas, copiar, mover de página o eliminar</strong>: desde el panel inferior.</li>
+      </ul>
+      <div class="note">
+        <strong>Consejo</strong>
+        Numdroid no pide permiso para ver tu galería: solo accede a la foto que eliges.
+      </div>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="dibujo" class="card">
+      <h2>Lápiz, resaltador y láser</h2>
+
+      <h3>Lápiz</h3>
+      <p>
+        Dibuja a mano sobre la hoja. Toca de nuevo el botón del lápiz para elegir
+        <strong>color</strong> y <strong>grosor</strong>, y el modo:
+      </p>
+      <ul>
+        <li><strong>Libre</strong>: el trazo queda tal cual lo dibujas.</li>
+        <li><strong>Asistido</strong>: al soltar, el trazo se convierte en la forma más parecida (línea, rectángulo, cuadrado, círculo, elipse o triángulo). Si no se parece a ninguna, queda libre.</li>
+      </ul>
+
+      <h3>Resaltador</h3>
+      <p>
+        Como el lápiz, pero con tinta semitransparente para marcar sin tapar el contenido.
+        Tiene sus propios colores y grosores.
+      </p>
+
+      <h3>Borrador</h3>
+      <p>
+        Pasa el dedo sobre los trazos del lápiz o del resaltador para borrarlos. No borra
+        textos, ecuaciones, formas ni imágenes: esos se eliminan desde su panel.
+      </p>
+
+      <h3>Puntero láser</h3>
+      <p>
+        Dibuja un rastro luminoso que <strong>no se guarda</strong> en el documento. Toca de
+        nuevo su botón para elegir color y modo:
+      </p>
+      <ul>
+        <li><strong>Cometa</strong>: el rastro se desvanece solo.</li>
+        <li><strong>Tinta</strong>: el rastro permanece hasta que tocas <strong>Limpiar</strong>.</li>
+      </ul>
+      <p>
+        Los colores, grosores y modos que elijas se recuerdan en cada proyecto.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="deshacer" class="card">
+      <h2>Deshacer y rehacer</h2>
+      <p>
+        Usa los botones de <strong>deshacer</strong> y <strong>rehacer</strong> de la barra
+        superior. Un gesto completo (mover, girar, escribir, borrar con el borrador) se
+        deshace de una sola vez.
+      </p>
+      <ul>
+        <li>El historial es de la sesión actual: se reinicia al abrir otro proyecto o cerrar la app.</li>
+        <li>Si haces un cambio después de deshacer, ya no podrás rehacer lo anterior.</li>
+        <li>El zoom, el desplazamiento y el láser no cuentan como cambios.</li>
+      </ul>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="presentacion" class="card">
+      <h2>Presentación</h2>
+      <p>
+        Puedes presentar tu documento revelando los elementos paso a paso, ideal para
+        explicar un ejercicio en clase.
+      </p>
+
+      <h3>1. Preparar el orden (Guion)</h3>
+      <ol>
+        <li>Toca el icono de <strong>diapositiva</strong> en la barra superior.</li>
+        <li>Toca los elementos en el orden en que quieres que aparezcan: cada uno recibe un número (1, 2, 3…).</li>
+        <li>Los elementos sin número se ven desde el principio.</li>
+      </ol>
+      <p>Con un elemento seleccionado puedes:</p>
+      <ul>
+        <li><strong>Multi</strong>: elegir varios para que aparezcan juntos en el mismo paso.</li>
+        <li><strong>Mover numeración</strong>: cambiar su posición en el orden.</li>
+        <li><strong>Quitar animación</strong>: que vuelva a verse desde el principio.</li>
+        <li><strong>Ocultar</strong>: que no aparezca en la presentación.</li>
+        <li><strong>Enfoque</strong>: añadir un marco de cámara para acercar la vista a una zona en ese paso.</li>
+      </ul>
+      <div class="note">
+        <strong>Consejo</strong>
+        En las gráficas puedes revelar primero los ejes y después cada curva o conjunto por
+        separado.
+      </div>
+
+      <h3>2. Presentar (Play)</h3>
+      <ol>
+        <li>Toca <strong>Reproducir</strong>.</li>
+        <li>Usa <strong>Siguiente</strong> y <strong>Anterior</strong> para avanzar o retroceder. Cada paso aparece con un fundido suave.</li>
+        <li>El láser está activo para señalar. También puedes cambiar a <strong>mover vista</strong>.</li>
+        <li>Toca la <strong>X</strong> para salir.</li>
+      </ol>
+      <p>La presentación empieza en la página actual y continúa por las siguientes.</p>
+
+      <h3>Transformar entre páginas</h3>
+      <p>
+        Puedes hacer que un objeto se desplace o cambie de tamaño suavemente al pasar a la
+        página siguiente, como en las presentaciones de diapositivas:
+      </p>
+      <ul>
+        <li><strong>Toda la página</strong>: usa <strong>Duplicar página</strong> y cambia en la copia la posición o el tamaño de los objetos.</li>
+        <li><strong>Un objeto</strong>: cópialo, ve a la otra página y pégalo. Queda enlazado («Pegado y enlazado»). Muévelo o cámbialo de tamaño allí.</li>
+      </ul>
+      <p>
+        En la presentación, al llegar a esa página, los objetos enlazados se mueven hasta su
+        nueva posición. Puedes activar o desactivar <strong>Al llegar: Transformar</strong> en
+        el menú de páginas. Para que un objeto se transforme, debe verse desde el principio
+        en ambas páginas (sin número de paso).
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="exportar" class="card">
+      <h2>Exportar y compartir</h2>
+      <p>Toca <strong>Archivo</strong> (icono de carpeta) en la barra superior:</p>
+      <ul>
+        <li><strong>Exportar PDF (documento)</strong>: todo el documento, con calidad de impresión.</li>
+        <li><strong>Exportar imagen (página actual)</strong>: un PNG de la página.</li>
+        <li><strong>Exportar imagen (vista actual)</strong>: un PNG de lo que ves en pantalla, con el zoom actual.</li>
+        <li><strong>Exportar imágenes (todas las páginas)</strong>: un ZIP con un PNG por página.</li>
+        <li><strong>Exportar proyecto</strong>: una copia editable <code>.numdroid</code> que puedes importar en otro dispositivo con Numdroid.</li>
+      </ul>
+      <p>
+        Al exportar se abre el menú de compartir de Android para enviar el archivo por
+        correo, mensajería o guardarlo donde quieras.
+      </p>
+      <div class="note premium">
+        <strong>Premium</strong>
+        En el plan gratis el PDF lleva marca de agua. El PDF sin marca, el ZIP de imágenes
+        y el proyecto <code>.numdroid</code> son funciones Premium.
+      </div>
+      <div class="note">
+        <strong>Consejo</strong>
+        La rejilla, el láser y lo que dejes fuera de la hoja nunca aparecen en los archivos
+        exportados.
+      </div>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="premium" class="card">
+      <h2>Numdroid Premium</h2>
+      <p>
+        Numdroid se puede usar gratis. Premium es una suscripción opcional, mensual o anual,
+        gestionada por Google Play. No necesitas crear una cuenta.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Función</th><th>Gratis</th><th>Premium</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Proyectos</td><td>Hasta 15</td><td>Ilimitados</td></tr>
+            <tr><td>Páginas por proyecto</td><td>Hasta 10</td><td>Ilimitadas</td></tr>
+            <tr><td>Formato de hoja</td><td>A4 vertical</td><td>A5–A2, Letter, formatos de pantalla, vertical u horizontal</td></tr>
+            <tr><td>Edición y presentación</td><td>Completas</td><td>Completas</td></tr>
+            <tr><td>Exportar PNG</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Exportar PDF</td><td>Con marca de agua</td><td>Sin marca de agua</td></tr>
+            <tr><td>Exportar ZIP de imágenes</td><td>—</td><td>Sí</td></tr>
+            <tr><td>Exportar proyecto <code>.numdroid</code></td><td>—</td><td>Sí</td></tr>
+            <tr><td>Importar proyecto <code>.numdroid</code></td><td>Sí, si hay espacio</td><td>Sí</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Cómo suscribirse</h3>
+      <ol>
+        <li>Toca el icono <strong>Premium</strong> (corona) en la galería, o cualquier función marcada como Premium.</li>
+        <li>Elige el plan <strong>Mensual</strong> o <strong>Anual</strong> y toca <strong>Suscribirme</strong>.</li>
+        <li>Completa el pago en Google Play.</li>
+      </ol>
+
+      <h3>Cancelar o gestionar la suscripción</h3>
+      <p>
+        Desde Google Play: toca tu foto de perfil → <strong>Pagos y suscripciones</strong> →
+        <strong>Suscripciones</strong>.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="faq" class="card">
+      <h2>Preguntas frecuentes</h2>
+
+      <h3>¿Necesito Internet?</h3>
+      <p>No. Puedes crear, editar, presentar y exportar sin conexión. Solo se usa Internet para las compras en Google Play.</p>
+
+      <h3>¿Dónde se guardan mis proyectos?</h3>
+      <p>En tu teléfono. No se suben a ningún servidor.</p>
+
+      <h3>¿Cómo paso mis proyectos a otro teléfono?</h3>
+      <p>
+        Exporta cada proyecto como <code>.numdroid</code> (Premium), guárdalo donde quieras
+        (por ejemplo, en tu nube o enviándolo por correo) e impórtalo desde la galería en el
+        otro teléfono.
+      </p>
+
+      <h3>¿Qué pasa con mis proyectos si cancelo Premium?</h3>
+      <p>
+        No pierdes nada. Puedes seguir abriendo y editando tus proyectos aunque superen los
+        límites del plan gratis; solo no podrás crear, duplicar ni importar más hasta estar
+        dentro del límite. Los proyectos con formatos de hoja Premium se pueden ver,
+        presentar y exportar (con marca de agua), pero no editar.
+      </p>
+
+      <h3>¿Puedo ver todas las páginas a la vez?</h3>
+      <p>Por ahora se muestra una página cada vez. Usa el carrusel del menú de páginas para saltar entre ellas.</p>
+
+      <h3>¿Puedo cambiar el grosor del contorno de las formas?</h3>
+      <p>Sí, desde el panel de <strong>Estilo</strong> de la forma seleccionada.</p>
+
+      <h3>¿Puedo copiar objetos a otra app?</h3>
+      <p>
+        Los objetos del lienzo se copian dentro de Numdroid. El código LaTeX de una ecuación
+        sí se puede copiar y pegar en otras apps desde el editor de ecuaciones.
+      </p>
+
+      <h3>¿El deshacer se mantiene al cerrar la app?</h3>
+      <p>No. El historial es de la sesión actual, pero tu trabajo siempre queda guardado.</p>
+
+      <h3>Tengo otra duda o encontré un error</h3>
+      <p>
+        Escríbenos a
+        <a href="mailto:appsangel.soporte@gmail.com">appsangel.soporte@gmail.com</a>.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <footer>
+      <p>
+        Numdroid · <a href="../">Política de privacidad</a> ·
+        <a href="mailto:appsangel.soporte@gmail.com">Contacto</a>
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
