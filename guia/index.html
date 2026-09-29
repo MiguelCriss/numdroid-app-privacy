@@ -106,7 +106,7 @@
 
     <article class="card">
       <h1>Guía de uso — Numdroid</h1>
-      <p class="meta">Versión de la app: 2.32 · Última actualización: 28 de septiembre de 2026</p>
+      <p class="meta">Versión de la app: 2.34 · Última actualización: 29 de septiembre de 2026</p>
       <p>
         Numdroid es una app para crear y presentar material matemático en hojas: texto,
         ecuaciones, gráficas, formas geométricas, circuitos, diagramas de flujo, imágenes
@@ -115,7 +115,8 @@
       </p>
       <p>
         Todo funciona <strong>sin conexión a Internet</strong> y tus documentos se guardan
-        en tu teléfono.
+        en tu teléfono. Si quieres, puedes guardar una copia en tu
+        <a href="#nube">Google Drive</a>.
       </p>
 
       <nav id="indice" aria-label="Índice">
@@ -124,6 +125,9 @@
           <li><a href="#primeros-pasos">Primeros pasos</a></li>
           <li><a href="#pantalla">La pantalla</a></li>
           <li><a href="#proyectos">Proyectos y galería</a></li>
+          <li><a href="#carpetas">Carpetas</a></li>
+          <li><a href="#papelera">Papelera</a></li>
+          <li><a href="#nube">Copia en Google Drive</a></li>
           <li><a href="#paginas">Páginas</a></li>
           <li><a href="#seleccionar">Seleccionar y organizar</a></li>
           <li><a href="#ajuste">Rejilla y alineación</a></li>
@@ -197,15 +201,24 @@
       <ul>
         <li><strong>Buscar</strong>: escribe parte del nombre.</li>
         <li><strong>Ordenar</strong>: por <strong>Fecha</strong> o por <strong>Nombre</strong>. Toca el control con la flecha para invertir el orden.</li>
+        <li><strong>Todos | Carpetas</strong>: muestra todos los proyectos juntos o navega por tus <a href="#carpetas">carpetas</a>.</li>
         <li><strong>Abrir</strong>: toca la tarjeta del proyecto.</li>
         <li><strong>Crear</strong>: toca <strong>+</strong>.</li>
       </ul>
+      <p>En la barra superior de la galería encontrarás:</p>
+      <ul>
+        <li><strong>Importar</strong>: añade un proyecto <code>.numdroid</code>.</li>
+        <li><strong>Nube</strong>: abre la <a href="#nube">copia en Google Drive</a>. Su icono indica el estado de la copia.</li>
+        <li><strong>Premium</strong>: la corona abre los planes; con Premium activo verás la pastilla <strong>Premium</strong>.</li>
+        <li><strong>Menú ⋮</strong>: tema de la app, <a href="#papelera">Papelera</a>, Guía de uso, Política de privacidad y Acerca de.</li>
+      </ul>
 
-      <h3>Renombrar, duplicar, exportar o eliminar</h3>
+      <h3>Renombrar, mover, duplicar, exportar o eliminar</h3>
       <p>
         Toca el menú <strong>⋮</strong> de la tarjeta de un proyecto. Allí puedes renombrarlo,
-        duplicarlo, exportarlo (PDF, proyecto <code>.numdroid</code> o imágenes ZIP) o
-        eliminarlo.
+        moverlo a una carpeta (<strong>Mover a…</strong>), duplicarlo, exportarlo (PDF,
+        proyecto <code>.numdroid</code> o imágenes ZIP) o enviarlo a la
+        <strong>papelera</strong>. Justo después aparece un aviso con <strong>Deshacer</strong>.
       </p>
 
       <h3>Importar un proyecto</h3>
@@ -238,6 +251,133 @@
         En la galería, toca el menú <strong>⋮</strong> de la barra superior y elige
         <strong>Claro</strong>, <strong>Oscuro</strong> o <strong>Sistema</strong>.
         El tema no cambia el color de tus páginas.
+      </p>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="carpetas" class="card">
+      <h2>Carpetas</h2>
+      <p>
+        Las carpetas sirven para ordenar tus proyectos por materia, curso o unidad. Son
+        gratuitas y admiten <strong>subcarpetas</strong> sin límite.
+      </p>
+      <ul>
+        <li><strong>Todos</strong>: todos los proyectos juntos. Si un proyecto está en una carpeta, su tarjeta muestra el nombre de la carpeta.</li>
+        <li><strong>Carpetas</strong>: arriba aparece la ruta (por ejemplo <code>Inicio › Álgebra › Unidad 1</code>). Toca cualquier tramo para volver a ese nivel. El botón <strong>Atrás</strong> del sistema sube un nivel.</li>
+        <li><strong>Buscar</strong> en modo Carpetas busca en la carpeta abierta y en todas sus subcarpetas.</li>
+      </ul>
+
+      <h3>Crear y organizar</h3>
+      <ol>
+        <li>Cambia a <strong>Carpetas</strong> y entra en la carpeta donde quieras trabajar.</li>
+        <li>Toca <strong>+</strong> y elige <strong>Nueva carpeta</strong> o <strong>Nuevo proyecto</strong>: se crea en la carpeta abierta.</li>
+        <li>Para mover un proyecto o una carpeta, abre su menú <strong>⋮</strong>, toca <strong>Mover a…</strong>, navega hasta el destino y pulsa <strong>Mover aquí</strong>.</li>
+      </ol>
+      <ul>
+        <li>El menú <strong>⋮</strong> de una carpeta permite <strong>Renombrar</strong>, <strong>Mover a…</strong> y <strong>Eliminar carpeta</strong>.</li>
+        <li>No puede haber dos carpetas con el mismo nombre dentro de la misma carpeta.</li>
+        <li>Al <strong>eliminar una carpeta</strong>, sus proyectos (también los de sus subcarpetas) van a la papelera.</li>
+        <li>Mover un proyecto no cuenta como editarlo: no cambia su fecha de modificación.</li>
+      </ul>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="papelera" class="card">
+      <h2>Papelera</h2>
+      <p>
+        Los proyectos que eliminas no se borran al momento: van a la papelera, donde se
+        guardan <strong>30 días</strong>. Ábrela desde el menú <strong>⋮</strong> de la
+        galería (muestra cuántos proyectos tiene, por ejemplo «Papelera · 3»).
+      </p>
+      <ul>
+        <li>Cada proyecto indica cuántos días le quedan.</li>
+        <li><strong>Restaurar</strong> lo devuelve a su carpeta (o a Inicio si la carpeta ya no existe).</li>
+        <li><strong>Eliminar definitivamente</strong> lo borra para siempre (pide confirmación). <strong>Vaciar</strong> borra todos.</li>
+        <li><strong>Deshacer</strong>, justo después de eliminar, siempre funciona.</li>
+      </ul>
+      <div class="note premium">
+        <strong>Premium</strong>
+        Los proyectos de la papelera no cuentan para el límite de 15 del plan gratis. Por
+        eso, para restaurar uno en el plan gratis hace falta un hueco libre.
+      </div>
+      <p class="back"><a href="#indice">↑ Volver al índice</a></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <section id="nube" class="card">
+      <h2>Copia en Google Drive</h2>
+      <p>
+        Numdroid puede copiar tus proyectos y carpetas en <strong>tu Google Drive</strong>,
+        dentro de una carpeta <strong>Numdroid</strong> con las mismas carpetas que en la
+        app. Cada proyecto se guarda como un archivo <code>.numdroid</code>.
+      </p>
+      <div class="note premium">
+        <strong>Premium</strong>
+        Hacer copias es una función Premium. <strong>Restaurar es gratis</strong>: cualquiera
+        puede recuperar sus proyectos desde Drive.
+      </div>
+
+      <h3>Conectar tu cuenta</h3>
+      <ol>
+        <li>En la galería, toca el icono de <strong>nube</strong>.</li>
+        <li>Toca <strong>Conectar Google Drive</strong> y elige tu cuenta.</li>
+        <li>Acepta el permiso de Google. Empieza la primera copia.</li>
+      </ol>
+      <div class="note">
+        <strong>Tu Drive sigue siendo tuyo</strong>
+        Numdroid solo puede ver los archivos que él mismo crea; el resto de tu Drive queda
+        fuera de su alcance. Los archivos van directamente de tu teléfono a tu Drive, sin
+        pasar por servidores de Numdroid. Más detalles en la
+        <a href="../">Política de privacidad</a>.
+      </div>
+
+      <h3>Cómo se hacen las copias</h3>
+      <ul>
+        <li><strong>Copia automática</strong> (activada por defecto): unos <strong>5 minutos después de tu último cambio</strong> y además <strong>una vez al día</strong>, aunque la app esté cerrada. Si se corta la conexión, lo vuelve a intentar sola.</li>
+        <li><strong>Solo con Wi-Fi</strong> (activado por defecto): las copias automáticas esperan a una red Wi-Fi para no gastar datos móviles.</li>
+        <li><strong>Hacer copia ahora</strong>: sube en el momento, con cualquier red, solo lo que cambió desde la última copia.</li>
+        <li><strong>La app manda</strong>: Drive es una copia. Si mueves o renombras algo a mano en la carpeta Numdroid, la siguiente copia lo devuelve a su sitio.</li>
+        <li><strong>Papelera</strong>: los proyectos de la papelera de la app se guardan en <code>Numdroid/Papelera</code>. Al eliminarlos definitivamente, se envían a la papelera de Drive.</li>
+        <li><strong>Varios teléfonos</strong> con la misma cuenta comparten la carpeta Numdroid; gana la última copia.</li>
+      </ul>
+
+      <h3>El icono de la nube</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Icono</th><th>Significado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Nube tachada</td><td>Sin conectar o sin Premium</td></tr>
+            <tr><td>Nube con flecha hacia arriba</td><td>Hay cambios sin copiar; se subirán en la próxima copia</td></tr>
+            <tr><td>Nube con flechas girando</td><td>Copiando</td></tr>
+            <tr><td>Nube con ✓</td><td>Drive tiene tus últimos cambios</td></tr>
+            <tr><td>Punto rojo</td><td>Hay que revisar: un error o volver a conectar la cuenta</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Restaurar desde Drive</h3>
+      <ol>
+        <li>Abre la hoja de la nube, conecta tu cuenta y toca <strong>Restaurar desde Drive</strong>.</li>
+        <li>En <strong>Para restaurar</strong> verás los proyectos que faltan en el teléfono o que tienen una versión más reciente en Drive, con su carpeta y su fecha.</li>
+        <li>Marca los que quieras (o <strong>Seleccionar todo</strong>) y toca <strong>Restaurar</strong>.</li>
+      </ol>
+      <ul>
+        <li>Los proyectos vuelven a sus carpetas; si faltan, se crean.</li>
+        <li>Lo que ya está al día aparece en la sección plegable <strong>Ya en el teléfono</strong>, con una marca ✓.</li>
+        <li>Lo que está en <code>Numdroid/Papelera</code> no se ofrece.</li>
+        <li>En un teléfono nuevo, al conectar verás el aviso <strong>Encontramos N proyectos en tu Drive</strong> con <strong>Restaurar</strong> o <strong>Ahora no</strong>.</li>
+        <li>En el plan gratis se restaura todo, pero solo son editables tus 15 proyectos modificados más recientemente; el resto queda en <a href="#premium">solo lectura</a>.</li>
+      </ul>
+
+      <h3>Desconectar</h3>
+      <p>
+        <strong>Desconectar</strong> deja de copiar y retira el permiso de Numdroid en tu
+        cuenta. Lo que ya está en tu Drive no se borra; puedes borrar la carpeta Numdroid
+        desde Drive si quieres.
       </p>
       <p class="back"><a href="#indice">↑ Volver al índice</a></p>
     </section>
@@ -358,10 +498,10 @@
       <ul>
         <li><strong>Rejilla</strong>: muestra una cuadrícula de referencia sobre la hoja. No se exporta ni aparece en la presentación.</li>
         <li><strong>Atraer a la rejilla</strong>: al soltar un elemento cerca de una línea de la rejilla, se alinea con ella.</li>
-        <li><strong>Atraer entre objetos</strong>: al arrastrar, si el centro de un elemento se acerca al centro de otro (o al centro de la hoja), aparece una guía punteada. Al soltar, los centros quedan alineados.</li>
+        <li><strong>Alinear centros</strong>: al arrastrar, si el centro de un elemento se acerca al centro de otro (o al centro de la hoja), aparece una guía punteada. Al soltar, los centros quedan alineados.</li>
         <li><strong>Atraer a bordes de hoja</strong>: al acercar un elemento al borde de la hoja, el borde se resalta y, al soltar, el elemento queda justo al ras.</li>
         <li><strong>Atraer rotación</strong>: al girar un elemento, se ajusta a ángulos de 45° (0°, 45°, 90°…) si estás cerca.</li>
-        <li><strong>Separación</strong> (Fina, Media o Gruesa): cambia la distancia entre las líneas de la rejilla.</li>
+        <li><strong>Separación de la rejilla</strong> (Fina, Media o Gruesa): cambia la distancia entre las líneas de la rejilla.</li>
       </ul>
       <p class="back"><a href="#indice">↑ Volver al índice</a></p>
     </section>
@@ -758,9 +898,29 @@
             <tr><td>Exportar ZIP de imágenes</td><td>—</td><td>Sí</td></tr>
             <tr><td>Exportar proyecto <code>.numdroid</code></td><td>—</td><td>Sí</td></tr>
             <tr><td>Importar proyecto <code>.numdroid</code></td><td>Sí, si hay espacio</td><td>Sí</td></tr>
+            <tr><td>Carpetas y papelera</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td>Copia automática en Google Drive</td><td>—</td><td>Sí</td></tr>
+            <tr><td>Restaurar desde Google Drive</td><td>Sí</td><td>Sí</td></tr>
           </tbody>
         </table>
       </div>
+
+      <h3>Si tienes más de lo que permite el plan gratis</h3>
+      <p>
+        Por ejemplo, al terminar una suscripción. No se borra nada, pero una parte queda en
+        <strong>solo lectura</strong>:
+      </p>
+      <ul>
+        <li>Siguen editables tus <strong>15 proyectos modificados más recientemente</strong> y, en cada documento, las <strong>primeras 10 páginas</strong>.</li>
+        <li>Los proyectos en solo lectura muestran el distintivo <strong>Solo lectura</strong> en la galería.</li>
+        <li>Se pueden abrir, presentar, exportar en PDF (con marca de agua) y eliminar. Con <strong>Copiar contenido</strong> (en el aviso de arriba del lienzo) copias todos los objetos de la página para pegarlos en una página editable.</li>
+        <li>Si eliminas un proyecto editable, el siguiente más reciente pasa a ser editable.</li>
+        <li>Con Premium todo vuelve a ser editable al instante.</li>
+      </ul>
+      <p>
+        Los proyectos con un formato de hoja Premium (otro tamaño u orientación) se pueden
+        ver, presentar y exportar con marca de agua, pero no editar sin Premium.
+      </p>
 
       <h3>Cómo suscribirse</h3>
       <ol>
@@ -782,24 +942,38 @@
       <h2>Preguntas frecuentes</h2>
 
       <h3>¿Necesito Internet?</h3>
-      <p>No. Puedes crear, editar, presentar y exportar sin conexión. Solo se usa Internet para las compras en Google Play.</p>
+      <p>
+        No. Puedes crear, editar, presentar y exportar sin conexión. Solo se usa Internet
+        para las compras en Google Play y, si la activas, para la copia en Google Drive.
+      </p>
 
       <h3>¿Dónde se guardan mis proyectos?</h3>
-      <p>En tu teléfono. No se suben a ningún servidor.</p>
+      <p>
+        En tu teléfono. No se suben a servidores de Numdroid. Si conectas Google Drive, se
+        guarda además una copia en tu propio Drive.
+      </p>
 
       <h3>¿Cómo paso mis proyectos a otro teléfono?</h3>
       <p>
-        Exporta cada proyecto como <code>.numdroid</code> (Premium), guárdalo donde quieras
-        (por ejemplo, en tu nube o enviándolo por correo) e impórtalo desde la galería en el
-        otro teléfono.
+        La forma más sencilla es la <a href="#nube">copia en Google Drive</a>: con Premium,
+        copia tus proyectos desde el teléfono de siempre; en el nuevo, conecta la misma
+        cuenta y toca <strong>Restaurar desde Drive</strong> (restaurar es gratis).
+        También puedes exportar cada proyecto como <code>.numdroid</code> (Premium) e
+        importarlo en el otro teléfono.
+      </p>
+
+      <h3>¿Numdroid puede ver el resto de mi Google Drive?</h3>
+      <p>
+        No. Solo puede acceder a la carpeta Numdroid y a los archivos que la propia app
+        creó.
       </p>
 
       <h3>¿Qué pasa con mis proyectos si cancelo Premium?</h3>
       <p>
-        No pierdes nada. Puedes seguir abriendo y editando tus proyectos aunque superen los
-        límites del plan gratis; solo no podrás crear, duplicar ni importar más hasta estar
-        dentro del límite. Los proyectos con formatos de hoja Premium se pueden ver,
-        presentar y exportar (con marca de agua), pero no editar.
+        No pierdes nada. Tus 15 proyectos más recientes siguen editables y el resto queda
+        en solo lectura (ver <a href="#premium">Numdroid Premium</a>). La copia automática
+        en Drive se pausa, pero lo que ya está en tu Drive se conserva y puedes
+        restaurarlo cuando quieras.
       </p>
 
       <h3>¿Puedo ver todas las páginas a la vez?</h3>
