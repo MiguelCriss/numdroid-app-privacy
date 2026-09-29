@@ -50,7 +50,9 @@
     p, li { color: var(--text); }
     .meta { color: var(--muted); font-size: 0.95rem; }
     a { color: var(--accent); }
-    ul { padding-left: 1.2rem; }
+    ul, ol { padding-left: 1.2rem; }
+    li { margin-bottom: 0.3rem; }
+    h2[id] { scroll-margin-top: 1rem; }
   </style>
 </head>
 <body>
@@ -290,24 +292,48 @@
         elijas.
       </p>
 
-      <h2>11. Conservación y eliminación</h2>
-      <ul>
+      <h2 id="eliminar-datos">11. Cómo borrar tus datos y cuánto se conservan</h2>
+      <p>
+        Numdroid no guarda tus datos en servidores del desarrollador, así que puedes
+        borrarlos tú mismo en cualquier momento:
+      </p>
+      <ol>
         <li>
-          Datos locales: puedes eliminar proyectos desde la app (pasan a la papelera y se
-          borran a los 30 días, o antes si los eliminas definitivamente), o borrar todos
-          los datos desinstalando Numdroid o borrando su almacenamiento en los ajustes
-          del sistema.
+          <strong>Un proyecto:</strong> en la galería, menú ⋮ del proyecto →
+          <em>Mover a la papelera</em>. Después, en ⋮ → <em>Papelera</em>, toca
+          <em>Eliminar definitivamente</em> o <em>Vaciar</em>. Lo que quede en la papelera
+          se borra solo a los 30 días.
         </li>
         <li>
-          Copia en Google Drive: se conserva en tu Drive hasta que tú la borres. Desinstalar
-          la app o desconectar la cuenta no la borra. Cuando eliminas definitivamente un
-          proyecto en la app estando conectado, la siguiente copia lo envía a la papelera
-          de tu Drive.
+          <strong>Todos los datos del teléfono</strong> (proyectos, imágenes, carpetas,
+          preferencias y registro de la copia en Drive): Ajustes de Android → Apps →
+          Numdroid → Almacenamiento → <em>Borrar datos</em>, o desinstala la app.
         </li>
         <li>
-          Compras y suscripción: se conservan y gestionan en tu cuenta de Google Play.
+          <strong>La copia en Google Drive:</strong> en la app, icono de nube →
+          <em>Desconectar</em> (retira el permiso y borra del teléfono el registro de la
+          copia). Luego borra la carpeta «Numdroid» de tu Google Drive; Google la elimina
+          de su papelera a los 30 días, o antes si la vacías. También puedes retirar el
+          acceso en
+          <a href="https://myaccount.google.com/connections" rel="noopener noreferrer" target="_blank">myaccount.google.com/connections</a>.
         </li>
-      </ul>
+        <li>
+          <strong>Compras y suscripción:</strong> los datos de pedidos los conserva Google
+          Play según sus propias obligaciones. Puedes cancelar la suscripción en Google
+          Play → Pagos y suscripciones.
+        </li>
+      </ol>
+      <p>
+        La copia en Google Drive se conserva hasta que tú la borres: desinstalar la app o
+        desconectar la cuenta no la elimina. Si eliminas definitivamente un proyecto en la
+        app estando conectado, la siguiente copia lo envía a la papelera de tu Drive.
+      </p>
+      <p>
+        El desarrollador no conserva copias de tus proyectos ni de tu Drive. Si necesitas
+        ayuda, escribe a
+        <a href="mailto:appsangel.soporte@gmail.com">appsangel.soporte@gmail.com</a>
+        con el asunto «Borrar mis datos — Numdroid».
+      </p>
 
       <h2>12. Menores de edad</h2>
       <p>
