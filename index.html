@@ -46,6 +46,7 @@
     }
     h1 { margin-top: 0; font-size: 1.75rem; color: var(--accent); }
     h2 { margin-top: 1.75rem; font-size: 1.15rem; }
+    h3 { margin-top: 1.25rem; font-size: 1rem; }
     p, li { color: var(--text); }
     .meta { color: var(--muted); font-size: 0.95rem; }
     a { color: var(--accent); }
@@ -56,15 +57,20 @@
   <main>
     <article class="card">
       <h1>Política de privacidad — Numdroid</h1>
-      <p class="meta">Última actualización: 28 de septiembre de 2026</p>
+      <p class="meta">Última actualización: 29 de septiembre de 2026</p>
       <p class="meta">Desarrollador: Miguel Chiri</p>
 
       <h2>1. Resumen</h2>
       <p>
         Numdroid es una aplicación Android para crear y presentar material matemático
         (texto, ecuaciones LaTeX, gráficas, formas, imágenes y dibujo a mano) de forma
-        local en el dispositivo. Tus proyectos se guardan solo en tu teléfono y
-        <strong>no se envían a servidores del desarrollador</strong>. Esta política
+        local en el dispositivo. Tus proyectos se guardan en tu teléfono y
+        <strong>no se envían a servidores del desarrollador</strong>.
+      </p>
+      <p>
+        Si tú lo activas, Numdroid puede guardar una copia de tus proyectos en
+        <strong>tu propia cuenta de Google Drive</strong>. Esa copia va directamente de tu
+        teléfono a tu Drive; el desarrollador no tiene acceso a ella. Esta política
         describe qué datos intervienen al usar la app.
       </p>
 
@@ -76,7 +82,13 @@
       <ul>
         <li>Los proyectos que creas: páginas, textos, ecuaciones, gráficas, formas, trazos y miniaturas.</li>
         <li>Las imágenes que insertas en tus proyectos (se guarda una copia dentro de la app).</li>
+        <li>Las carpetas en las que organizas tus proyectos y la papelera (los proyectos eliminados se conservan 30 días).</li>
         <li>Preferencias de la app: tema, colores personalizados, opciones de rejilla y el último proyecto abierto.</li>
+        <li>
+          Si conectas Google Drive: la dirección de correo de la cuenta conectada, las
+          opciones de la copia (copia automática, solo con Wi-Fi) y un registro técnico
+          de qué archivos de Drive corresponden a cada proyecto y carpeta.
+        </li>
         <li>Archivos temporales de exportación (PNG, PDF, ZIP) cuando exportas o compartes.</li>
       </ul>
       <p>
@@ -97,7 +109,101 @@
         el portapapeles del sistema de tu dispositivo.
       </p>
 
-      <h2>4. Compras y suscripciones (Google Play)</h2>
+      <h2>4. Copia de seguridad en Google Drive (opcional)</h2>
+      <p>
+        La copia en Google Drive es <strong>opcional</strong> y solo se activa si tú
+        conectas tu cuenta desde el icono de nube de la galería y aceptas el permiso que
+        muestra Google. Hacer copias es una función de Numdroid Premium; restaurar
+        proyectos desde Drive es gratis.
+      </p>
+
+      <h3>Permiso que se solicita</h3>
+      <p>
+        Numdroid pide únicamente el permiso de Google Drive para
+        <strong>ver, editar, crear y eliminar solo los archivos específicos de Google
+        Drive que usas con esta app</strong> (<code>drive.file</code>). Con este permiso,
+        Numdroid solo puede acceder a los archivos y carpetas que la propia app crea (la
+        carpeta «Numdroid» y su contenido). <strong>No puede ver, leer ni modificar
+        ningún otro archivo de tu Drive.</strong>
+      </p>
+
+      <h3>Datos de Google que usa la app</h3>
+      <ul>
+        <li>
+          <strong>La dirección de correo de la cuenta conectada</strong>, para mostrarte
+          qué cuenta está conectada y detectar si cambias de cuenta. Se guarda solo en tu
+          dispositivo.
+        </li>
+        <li>
+          <strong>Los archivos y carpetas que Numdroid creó en tu Drive</strong> y sus
+          datos (nombre, carpeta, fecha de modificación e identificadores internos), para
+          saber qué está copiado, subir solo lo que cambió, mantener en Drive las mismas
+          carpetas que en la app y mostrarte qué puedes restaurar.
+        </li>
+        <li>
+          <strong>Un permiso de acceso temporal</strong> que Google emite a través de los
+          servicios de Google Play. Numdroid nunca conoce ni guarda tu contraseña.
+        </li>
+      </ul>
+
+      <h3>Qué se guarda en tu Drive</h3>
+      <ul>
+        <li>
+          Una copia de cada proyecto como archivo <code>.numdroid</code>, con su contenido
+          (páginas, textos, ecuaciones, gráficas, formas, trazos, miniatura y las imágenes
+          que insertaste).
+        </li>
+        <li>Carpetas con los mismos nombres que en la app, y una carpeta «Papelera» con los proyectos de la papelera de la app.</li>
+        <li>Datos técnicos de cada archivo: identificador del proyecto o carpeta y fecha de modificación.</li>
+      </ul>
+
+      <h3>Cómo y cuándo se envían</h3>
+      <p>
+        Los archivos se envían <strong>directamente desde tu teléfono a Google Drive</strong>
+        mediante una conexión cifrada (HTTPS). No pasan por servidores del desarrollador y
+        el desarrollador no tiene acceso a tu Drive ni a tus copias. La copia se hace al
+        conectar la cuenta, unos minutos después de tus cambios y una vez al día, también
+        en segundo plano con la app cerrada. Por defecto solo se copia con Wi-Fi. Puedes
+        desactivar la copia automática en cualquier momento.
+      </p>
+      <p>
+        Al <strong>restaurar</strong>, la app descarga desde tu carpeta «Numdroid» los
+        proyectos que elijas y los guarda en tu teléfono.
+      </p>
+
+      <h3>Uso limitado de los datos de Google</h3>
+      <p>
+        Numdroid usa los datos obtenidos de Google <strong>solo para hacer y restaurar
+        tus copias</strong>. No los vende, no los comparte con terceros, no los usa para
+        publicidad ni para entrenar modelos de inteligencia artificial, y ninguna persona
+        los lee.
+      </p>
+      <p>
+        El uso y la transferencia a cualquier otra app de la información recibida de las
+        API de Google por parte de Numdroid se ajustará a la
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer" target="_blank">Política de Datos de Usuario de los Servicios de API de Google</a>,
+        incluidos los requisitos de Uso Limitado.
+      </p>
+
+      <h3>Desconectar y borrar la copia</h3>
+      <ul>
+        <li>
+          <strong>Desconectar</strong> en la app detiene las copias, retira el permiso de
+          Numdroid en tu cuenta y borra del teléfono el registro de la copia. Los archivos
+          que ya están en tu Drive no se borran.
+        </li>
+        <li>Puedes borrar la carpeta «Numdroid» de tu Drive cuando quieras.</li>
+        <li>
+          También puedes retirar el acceso desde tu cuenta de Google, en
+          <a href="https://myaccount.google.com/connections" rel="noopener noreferrer" target="_blank">myaccount.google.com/connections</a>.
+        </li>
+      </ul>
+      <p>
+        Los archivos guardados en Google Drive también se rigen por la
+        <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">política de privacidad de Google</a>.
+      </p>
+
+      <h2>5. Compras y suscripciones (Google Play)</h2>
       <p>
         Numdroid ofrece una suscripción opcional <strong>Numdroid Premium</strong>
         mediante <strong>Google Play Billing</strong>. El pago, la facturación y la
@@ -121,32 +227,42 @@
         suscripciones → Suscripciones.
       </p>
 
-      <h2>5. Datos que no recopilamos</h2>
+      <h2>6. Datos que no recopilamos</h2>
       <p>
-        Aparte de la información de compras descrita en el apartado anterior, el
-        desarrollador de Numdroid no recopila:
+        El desarrollador de Numdroid no recibe en servidores propios:
       </p>
       <ul>
-        <li>Nombre, correo o perfil de usuario (la app no tiene inicio de sesión).</li>
-        <li>El contenido de tus proyectos ni las imágenes que insertas.</li>
-        <li>Ubicación, contactos, fotos, audio ni datos de la cámara.</li>
+        <li>Tu nombre, correo ni perfil de usuario (la app no tiene cuentas propias; el correo de Google Drive solo se usa en tu dispositivo).</li>
+        <li>El contenido de tus proyectos ni las imágenes que insertas (si activas la copia, van solo a tu propio Google Drive).</li>
+        <li>Ubicación, contactos, fotos de tu galería, audio ni datos de la cámara.</li>
         <li>Analíticas propias, publicidad ni rastreo entre apps.</li>
       </ul>
 
-      <h2>6. Permisos</h2>
-      <p>
-        Numdroid utiliza el permiso de facturación de Google Play para la suscripción
-        Premium. La biblioteca de Google Play incluye además permisos de red y de
-        verificación de licencia, que se usan <strong>únicamente para comunicarse con
-        Google Play</strong> (comprobar compras y la licencia de la app). El contenido
-        de tus proyectos nunca se envía por Internet.
-      </p>
+      <h2>7. Permisos</h2>
+      <ul>
+        <li>
+          <strong>Facturación de Google Play</strong>: para la suscripción Premium. La
+          biblioteca de Google Play incluye además permisos de verificación de licencia,
+          que se usan solo para comunicarse con Google Play.
+        </li>
+        <li>
+          <strong>Acceso a Internet y estado de la red</strong>: para comunicarse con
+          Google Play y, si conectas tu cuenta, con Google Drive. El estado de la red se
+          usa para saber si hay Wi-Fi antes de hacer una copia.
+        </li>
+        <li>
+          <strong>Tareas en segundo plano</strong> (iniciar al encender el teléfono y
+          mantenerlo activo brevemente): los usa el sistema de tareas de Android
+          (WorkManager) para hacer las copias programadas en Google Drive aunque la app
+          esté cerrada.
+        </li>
+      </ul>
       <p>
         La app <strong>no solicita</strong> acceso a la cámara, el micrófono, la
         ubicación, los contactos ni a tu galería de fotos.
       </p>
 
-      <h2>7. Informes de fallos</h2>
+      <h2>8. Informes de fallos</h2>
       <p>
         Si lo has autorizado en la configuración de tu dispositivo, Google Play puede
         proporcionar al desarrollador informes de fallos y estadísticas anónimas y
@@ -155,36 +271,45 @@
         contenido de tus proyectos y se usan solo para corregir errores.
       </p>
 
-      <h2>8. Copias de seguridad del sistema</h2>
+      <h2>9. Copias de seguridad del sistema</h2>
       <p>
-        Android puede incluir datos de la app (proyectos, imágenes y preferencias) en
-        las copias de seguridad de tu cuenta de Google, según la configuración de tu
-        dispositivo. Estas copias las gestiona Google y el sistema operativo, no un
-        servicio del desarrollador. Puedes desactivarlas en los ajustes de copia de
-        seguridad de Android.
+        Además de la copia opcional en Google Drive descrita en el apartado 4, Android
+        puede incluir datos de la app (proyectos, imágenes y preferencias) en las copias
+        de seguridad de tu cuenta de Google, según la configuración de tu dispositivo.
+        Estas copias las gestiona Google y el sistema operativo, no un servicio del
+        desarrollador. Puedes desactivarlas en los ajustes de copia de seguridad de
+        Android.
       </p>
 
-      <h2>9. Seguridad</h2>
+      <h2>10. Seguridad</h2>
       <p>
         Tus datos se guardan en el almacenamiento privado de la app, protegido por
-        Android frente al acceso de otras aplicaciones. Los archivos que exportas son
+        Android frente al acceso de otras aplicaciones. Las comunicaciones con Google
+        Drive y Google Play están cifradas (HTTPS). Los archivos que exportas son
         copias; una vez compartidos, quedan bajo el control de la app o el destino que
         elijas.
       </p>
 
-      <h2>10. Conservación y eliminación</h2>
+      <h2>11. Conservación y eliminación</h2>
       <ul>
         <li>
-          Datos locales: puedes eliminar proyectos desde la app, o borrar todos los
-          datos desinstalando Numdroid o borrando su almacenamiento en los ajustes
+          Datos locales: puedes eliminar proyectos desde la app (pasan a la papelera y se
+          borran a los 30 días, o antes si los eliminas definitivamente), o borrar todos
+          los datos desinstalando Numdroid o borrando su almacenamiento en los ajustes
           del sistema.
+        </li>
+        <li>
+          Copia en Google Drive: se conserva en tu Drive hasta que tú la borres. Desinstalar
+          la app o desconectar la cuenta no la borra. Cuando eliminas definitivamente un
+          proyecto en la app estando conectado, la siguiente copia lo envía a la papelera
+          de tu Drive.
         </li>
         <li>
           Compras y suscripción: se conservan y gestionan en tu cuenta de Google Play.
         </li>
       </ul>
 
-      <h2>11. Menores de edad</h2>
+      <h2>12. Menores de edad</h2>
       <p>
         Numdroid está dirigida a personas mayores de 18 años y no está diseñada para
         niños. La app no recopila a sabiendas datos personales de ningún menor de
@@ -192,23 +317,23 @@
         parentales para autorizarlas.
       </p>
 
-      <h2>12. Tus derechos</h2>
+      <h2>13. Tus derechos</h2>
       <p>
         Como Numdroid no guarda datos personales en servidores propios, el desarrollador
         no dispone de datos tuyos que consultar, corregir o eliminar. Tus proyectos están
-        solo en tu dispositivo y los controlas tú. Para los datos relacionados con
-        compras, puedes ejercer tus derechos ante Google.
+        en tu dispositivo y, si activas la copia, en tu propio Google Drive: los controlas
+        tú y puedes borrarlos cuando quieras. Para los datos relacionados con tu cuenta de
+        Google, Google Drive o las compras, puedes ejercer tus derechos ante Google.
       </p>
 
-      <h2>13. Cambios</h2>
+      <h2>14. Cambios</h2>
       <p>
         Podemos actualizar esta política. La fecha de «Última actualización» indica la
         versión vigente. Si un cambio afecta de forma importante a cómo se tratan tus
-        datos (por ejemplo, si se añaden cuentas o sincronización en la nube), te
-        avisaremos dentro de la app antes de que entre en vigor.
+        datos, te avisaremos dentro de la app antes de que entre en vigor.
       </p>
 
-      <h2>14. Contacto</h2>
+      <h2>15. Contacto</h2>
       <p>
         Si tienes preguntas sobre privacidad en Numdroid, escribe a:
         <a href="mailto:appsangel.soporte@gmail.com">appsangel.soporte@gmail.com</a>.
