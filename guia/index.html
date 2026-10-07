@@ -106,7 +106,7 @@
 
     <article class="card">
       <h1>Guía de uso — Numdroid</h1>
-      <p class="meta">Versión de la app: 2.36 · Última actualización: 29 de septiembre de 2026</p>
+      <p class="meta">Versión de la app: 2.38 · Última actualización: 7 de octubre de 2026</p>
       <p>
         Numdroid es una app para crear y presentar material matemático en hojas: texto,
         ecuaciones, gráficas, formas geométricas, circuitos, diagramas de flujo, imágenes
@@ -210,7 +210,7 @@
         <li><strong>Importar</strong>: añade un proyecto <code>.numdroid</code>.</li>
         <li><strong>Nube</strong>: abre la <a href="#nube">copia en Google Drive</a>. Su icono indica el estado de la copia.</li>
         <li><strong>Premium</strong>: la corona abre los planes; con Premium activo verás la pastilla <strong>Premium</strong>.</li>
-        <li><strong>Menú ⋮</strong>: tema de la app, <a href="#papelera">Papelera</a>, Guía de uso, Política de privacidad y Acerca de.</li>
+        <li><strong>Menú ⋮</strong>: configuración (tema de la app y <a href="#modos-ecuacion">editor de ecuaciones</a>), <a href="#papelera">Papelera</a>, Guía de uso, Política de privacidad y Acerca de.</li>
       </ul>
 
       <h3>Renombrar, mover, duplicar, exportar o eliminar</h3>
@@ -552,9 +552,9 @@
     <section id="ecuaciones" class="card">
       <h2>Ecuaciones</h2>
       <p>
-        Las ecuaciones se escriben en LaTeX, el lenguaje estándar de las fórmulas
-        matemáticas, y se ven en la hoja al instante. No hace falta saber LaTeX de memoria:
-        el teclado de Numdroid incluye plantillas para casi todo.
+        Las ecuaciones se ven en la hoja al instante mientras escribes. No hace falta saber
+        LaTeX, el lenguaje estándar de las fórmulas matemáticas: el teclado de Numdroid
+        incluye plantillas para casi todo.
       </p>
 
       <h3>Añadir una ecuación</h3>
@@ -564,6 +564,41 @@
         <li>Toca dos veces para abrir el editor.</li>
         <li>Escribe con el teclado de ecuaciones. La fórmula se actualiza en la hoja mientras escribes.</li>
       </ol>
+
+      <h3 id="modos-ecuacion">Modo visual (beta) y modo código</h3>
+      <p>Puedes editar las ecuaciones de dos formas:</p>
+      <ul>
+        <li><strong>Visual β</strong> (por defecto, en pruebas): escribes directamente sobre la fórmula, sin ver el código.</li>
+        <li><strong>Código</strong>: escribes el código LaTeX en un campo de texto.</li>
+      </ul>
+      <p>
+        Para cambiar de modo, selecciona una ecuación y toca la pastilla
+        <strong>Visual β</strong> / <strong>Código</strong> al principio de la fila de formato,
+        o ve a la galería → menú <strong>⋮</strong> → <strong>Editor de ecuaciones</strong>.
+        La app recuerda tu elección. Cambiar de modo no modifica la ecuación.
+      </p>
+
+      <h3>Escribir en modo visual</h3>
+      <ul>
+        <li><strong>Abrir y cerrar</strong>: toca dos veces la ecuación o el botón del <strong>lápiz</strong> encima del panel. Para terminar, toca la <strong>✕</strong>.</li>
+        <li><strong>Mover el cursor</strong>: toca cualquier parte de la fórmula o usa <strong>←</strong> y <strong>→</strong>, que entran y salen de fracciones, raíces, exponentes y celdas.</li>
+        <li><strong>Plantillas</strong>: las partes vacías de una fracción, raíz o matriz aparecen como huecos marcados; tócalos para escribir en ellos.</li>
+        <li><strong>Estilos</strong>: negrita, tipo de letra (por ejemplo, Pizarra para ℝ o Caligráfica), color y <strong>Texto</strong> para escribir palabras dentro de la fórmula.</li>
+        <li><strong>Matrices y sistemas</strong>: <strong>↵</strong> añade una fila debajo.</li>
+        <li><strong>Copiar y pegar</strong>: lo que copias se puede pegar como código LaTeX en otras apps, y el LaTeX que pegas se dibuja como fórmula.</li>
+      </ul>
+      <p>
+        En modo visual, la columna derecha del teclado muestra <strong>π</strong>,
+        <strong>(</strong> y <strong>)</strong>; mantenlas pulsadas para más opciones. Las
+        teclas <strong>xₙ</strong> y <strong>xⁿ</strong> crean subíndices y exponentes.
+        El editor ampliado (pantalla completa) solo está en modo código.
+      </p>
+      <div class="note">
+        <strong>Si algo falla</strong>
+        Si el modo visual tiene un problema con una ecuación, la app te avisa y esa ecuación
+        pasa a modo código sin perder nada. Si te pasa, escríbenos para que podamos
+        corregirlo.
+      </div>
 
       <h3>El teclado de ecuaciones</h3>
       <p>Al editar una ecuación aparece un teclado propio (no el del sistema) con:</p>
@@ -613,7 +648,7 @@
 
       <h3>Editor ampliado</h3>
       <p>
-        Toca el icono de <strong>pantalla completa</strong> para editar con más espacio y
+        En modo código, toca el icono de <strong>pantalla completa</strong> para editar con más espacio y
         una vista previa grande de la fórmula. Toca el mismo icono (o atrás) para volver.
       </p>
 
@@ -1010,6 +1045,13 @@
         Solo si no la cancelas: Google Play no la cancela sola. Cancélala en Google Play →
         Pagos y suscripciones → Suscripciones. La pastilla Premium de la galería te avisa
         mientras siga activa.
+      </p>
+
+      <h3>Prefiero escribir el código LaTeX, ¿se puede?</h3>
+      <p>
+        Sí. Cambia al <a href="#modos-ecuacion">modo código</a> con la pastilla
+        <strong>Visual β</strong> de la ecuación o en galería → <strong>⋮</strong> →
+        <strong>Editor de ecuaciones</strong>. La app lo recordará.
       </p>
 
       <h3>¿Puedo ver todas las páginas a la vez?</h3>
